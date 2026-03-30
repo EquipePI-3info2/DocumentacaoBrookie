@@ -238,37 +238,77 @@ negócio. Lembre-se que, diferentemente das entradas e processos, aqui os dados 
 
 **5.4.7 Exemplo de organização dos requisitos funcionais**
 
-(_A seguir, um exemplo de organização de requisitos funcionais, com entradas, processos e saídas._)
+RF001: O sistema deve manter usuários com nome, e-mail, senha e telefone.
+RN001.01: O e-mail do usuário deve ser único no sistema, não sendo permitido o cadastro de dois usuários com o mesmo e-mail.
+RN001.02: Os campos nome, e-mail e senha são obrigatórios no cadastro.
+RN001.03: O e-mail deve estar em formato válido.
 
-**Entradas:**
+RF002: O sistema deve permitir autenticação de usuários cadastrados por e-mail e senha.
+RN002.01: Apenas usuários previamente cadastrados podem realizar login no sistema.
+RN002.02: O acesso só será permitido quando e-mail e senha informados forem válidos.
+RN002.03: Após autenticação bem-sucedida, o sistema deve iniciar a sessão do usuário.
 
-- **R.F. 01 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
+RF003 – O sistema deve permitir o cadastro, edição e exclusão de endereços de entrega associados ao usuário.
+RN003.01: Cada usuário pode cadastrar múltiplos endereços de entrega.
+RN003.02: Apenas o próprio usuário pode editar ou excluir seus endereços.
+RN003.03: Para realizar um pedido, o usuário deve possuir ao menos um endereço cadastrado.
 
-- **R.F. 02 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
+RF004 – O sistema deve manter produtos (cookies e brownies) com nome, descrição, preço, categoria, imagens e quantidade em estoque.
+RN004.01: Todo produto deve possuir nome, preço, categoria e quantidade em estoque.
+RN004.02: O preço do produto deve ser maior que zero.
+RN004.03: A quantidade em estoque não pode ser negativa.
 
-**Processamento:**
+RF005 – O sistema deve permitir ao administrador realizar operações de criação, leitura, atualização e exclusão (CRUD) de produtos.
+RN005.01: Apenas usuários com perfil de administrador podem cadastrar, editar ou excluir produtos.
+RN005.02: Alterações realizadas em produtos devem ser registradas no sistema.
 
-- **R.F. 03 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
 
-- **R.F. 04 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
+RF006 – O sistema deve organizar os produtos por categorias.
+RN006.01: Todo produto deve obrigatoriamente estar associado a uma categoria.
+RN006.02: Uma categoria pode possuir múltiplos produtos.
 
-**Saídas:**
 
-- **R.F. 05 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
+RF007 – O sistema deve permitir que usuários visualizem o catálogo de produtos e filtrem por categoria ou nome.
+RN007.01: O catálogo deve exibir apenas produtos disponíveis para venda.
 
-- **R.F. 06 - Nome do requisito funcional:** descrição do requisito.
-  - **Dados necessários:** dado 1, dado 2, dado 3.
-  - **Usuários:** todos os níveis de usuário.
+
+RF008 – O sistema deve exibir os detalhes completos de um produto selecionado.
+RN008.01: A página do produto deve exibir nome, descrição, preço, imagens e disponibilidade em estoque.
+RN008.02: Caso o produto esteja sem estoque, essa informação deve ser exibida ao usuário.
+
+RF009 – O sistema deve permitir que usuários adicionem produtos ao carrinho de compras.
+RN009.01: Apenas usuários autenticados podem adicionar produtos ao carrinho.
+RN009.02: A quantidade adicionada ao carrinho não pode ultrapassar o estoque disponível.
+
+RF010 – O sistema deve permitir que usuários alterem quantidades ou removam produtos do carrinho.
+
+RF011 – O sistema deve processar pagamentos por meio da API do Mercado Pago.
+
+RF012 – O sistema deve registrar pedidos confirmados após a aprovação do pagamento.
+
+RF013 – O sistema deve manter o histórico de pedidos do usuário.
+RN013.01: O histórico deve apresentar data, valor total e status do pedido.
+
+RF014 – O sistema deve permitir ao administrador visualizar todos os pedidos realizados.
+
+RF015 – O sistema deve permitir ao administrador atualizar o status dos pedidos.
+RN015.01: O status do pedido pode assumir valores como: pendente, em preparação, enviado ou concluído.
+
+RF016 – O sistema deve atualizar automaticamente o estoque conforme os pedidos confirmados.
+
+RF017 – O sistema deve permitir o cadastro de despesas operacionais pelo administrador.
+RN017.01: Cada despesa deve possuir descrição, valor e data.
+
+RF018 – O sistema deve calcular automaticamente o valor total de vendas.
+RN018.01: O total de vendas deve considerar apenas pedidos com pagamento confirmado.
+
+RF019 – O sistema deve calcular automaticamente o lucro bruto com base nas vendas.
+RN019.01: O lucro bruto deve ser calculado automaticamente com base no valor total de vendas registradas.
+
+RF020 – O sistema deve calcular automaticamente o lucro líquido considerando as despesas cadastradas.
+RN020.01: O lucro líquido deve ser calculado subtraindo as despesas operacionais do valor total de vendas.
+
+RF021 – O sistema deve exibir, no painel administrativo, indicadores de vendas, pedidos, estoque e resultados financeiros.
 
 # 6. Requisitos não funcionais
 
@@ -326,39 +366,32 @@ aplicáveis.
 
 **6.4 Exemplo de organização dos requisitos não funcionais**
 
-(_A seguir, um exemplo de organização de requisitos não funcionais._)
+RNF001 – O sistema deve ser desenvolvido para ambiente web, acessível por navegadores modernos.
 
-**Requisitos não funcionais:**
+RNF002 – O sistema deve possuir interface responsiva, adaptando-se corretamente a dispositivos móveis, tablets e desktops.
 
-- **R.N.F. 01 - Nome do requisito não funcional:** descrição do requisito.
-- **R.N.F. 02 - Nome do requisito não funcional:** descrição do requisito.
+RNF003 – O sistema deve funcionar como uma Progressive Web App (PWA), permitindo a instalação no dispositivo do usuário.
 
-**Exemplos de requisitos não funcionais:**
+RNF004 – O sistema deve garantir tempo de resposta inferior a 3 segundos para operações comuns (login, listagem de produtos, carrinho e pedidos).
 
+RNF005 – O sistema deve utilizar comunicação segura via protocolo HTTPS.
 
-**Sistema de Padaria**:
-- **R.N.F. 01 - Navegador homologado:** O sistema deverá ser homologado para os navegadores Google Chrome e Mozilla Firefox.
-- **R.N.F. 02 - Processador:** É recomendado para o sistema  no mínimo um processador Intel i3, similar ou superior a geração 7100 ou AMD Ryzen 3 da geração similar ou superior ao 3100, para que o servidor funcione em sua melhor performance.
-- **R.N.F. 03 - Memória RAM:** é recomendável que o sistema possua no mínimo 2GB de RAM para melhor performance.
-- **R.N.F. 04 - Arquitetura:** Será utilizada a arquitetiura MVC para o desenvolvimento do sistema, com uso de uma API REST para comunicação com o banco de dados.
-- **R.N.F. 05 - Banco de dados:** O sistema será implementado com o banco de dados MySQL.
-- **R.N.F. 06 - Conexão com banco de dados:** Para conexão com o banco de dados, o sistema utilizará a ferramenta de MySQL Connector.
-- **R.N.F. 07 - Implementação:** O sistema deverá ser desenvolvido com linguagem Python, Javascript, HTML5, CSS3 e SQL.
-- **R.N.F. 08 - Segurança:** Ficará a critério do responsável do estabelecimento a segurança dos acessos ao sistema, tendo consciência das pessoas que possua permissão para acesso.
-- **R.N.F. 09 - Ambiente de Desenvolvimento Integrado (IDE):** Para criação do sistema, será utilizado o editor de texto Visual Studio Code.
-- **R.N.F. 10 - Disponibilidade:** O sistema irá atender 99% do tempo de uso, somente ocorreria problemas de cadastro, remoção, inserção ou alteração em casos de falta de rede ou energia.
-- **R.N.F. 11 - Legais:** O sistema deve atender às exigências da LGPD (Leis Gerais da Proteção de Dados).
+RNF006 – As senhas dos usuários devem ser armazenadas de forma criptografada.
 
-**Sistema de Ordem de Serviço:**
-- **R.N.F. 01 - Navegadores homologados:** o sistema deverá ser homologado para os navegadores Google Chrome e Mozilla Firefox.
-- **R.N.F. 02 - Tecnologia Front-end:** Para a exibição em front-end, o software utilizará o CSS3 e o HTML5, além do framework Vue.js.
-- **R.N.F. 03- Tecnologia Back-end:** O software será desenvolvido pela linguagem de programação Python, com o framework Django e a API REST com Django REST Framework.
-- **R.N.F. 04 - Interoperabilidade:** O banco de dados será o MySQL, com a linguagem SQL de banco, sendo todo produzido através do MySQL Workbench .
-- **R.N.F. 05 - Forma de uso do software:** O sistema por fazer parte de um ambiente interno, provavelmente será utilizado de acordo com as horas de trabalho da empresa, mas estará ativo 24 horas por dia em 7 dias por semana.
-- **R.N.F. 06 - Desempenho:** Para a utilização correta e com uma qualidade e eficiência melhor, é recomendado que se use o SO mais atualizado, com recursos de hardware equivalentes a um processador intel i3 5°Gen ou semelhante, e 8GB de memória RAM, assim como os navegadores homologados.
-- **R.N.F. 07- Autenticação:** Para realizar o acesso ao sistema é necessário ter um usuário de autenticação criado pelo administrador, além da possibilidade de solicitar um envio de redefinição de senha.
-- **R.N.F. 08 - Web Server:** O servidor web utilizado será o Apache Tomcat, nas versões mais atualizadas.
-- **R.N.F. 09 - Níveis de segurança:** O software terá diferentes tipos de acesso para cada tipo de login, tendo as permissões ideais a função de cada um.
+RNF007 – O sistema deve garantir a integridade das transações financeiras realizadas por meio da API do Mercado Pago.
+
+RNF008 – O sistema deve ser capaz de suportar múltiplos usuários simultâneos sem degradação perceptível de desempenho.
+
+RNF009 – O sistema deve possuir controle de acesso baseado em perfis (usuário e administrador).
+
+RNF010 – O sistema deve manter persistência dos dados em banco de dados relacional ou equivalente, garantindo consistência das informações.
+
+RNF011 – O sistema deve garantir disponibilidade mínima de 99% em ambiente de produção.
+
+RNF012 – O sistema deve permitir manutenção evolutiva, seguindo padrões de desenvolvimento que facilitem atualização e correção.
+
+RNF013 – O sistema deve registrar logs de operações críticas (login, pedidos, pagamentos e alterações administrativas).
+
 
 **6.6 Conclusão**
 
