@@ -52,8 +52,7 @@ Para o administrador, o sistema oferecerá um painel de gerenciamento que permit
 Com a implementação dessa solução, espera-se melhorar a organização dos pedidos, reduzir erros operacionais e proporcionar uma experiência de compra mais rápida e prática para os clientes, além de fornecer ferramentas de análise e controle para a administração da loja.
 
 # 4. Modelagem de Dados
-![MER](img/mer.png)
-<img width="982" height="629" alt="modelagem_brookie" src="https://github.com/user-attachments/assets/8a147499-14b9-47a9-b5e1-72b12497ae6d" />
+![MER](img/modelagem_brookie.png)
 
 # 4. Regras de negócio
 (*Nessa parte a equipe deve descrever as regras de negócio que serão implementadas no sistema. O texto abaixo descreve o que essa etapa deve conter e pode ser apagado depois.*)
