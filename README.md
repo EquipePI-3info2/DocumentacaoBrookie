@@ -5,7 +5,7 @@ Desenvolvimento do Projeto Integrador do Curso Técnico em Desenvolvimento de Si
 
 O projeto Brookiê consiste no desenvolvimento de uma plataforma de comércio eletrônico voltada para a venda de cookies e brownies. O sistema permitirá que clientes visualizem produtos, realizem pedidos online e efetuem pagamentos de forma segura. Além disso, a plataforma contará com um painel administrativo para controle de vendas, estoque e análise financeira do negócio. O objetivo é oferecer uma experiência de compra simples e eficiente para os clientes, ao mesmo tempo em que fornece ferramentas de gestão para o administrador da loja.
 
-Professor: [Marco André Mendes](github.com/marcoandre)
+Professor: [Marco André Mendes](https://github.com/marrcandre)
 
 Equipe:
 - [Arthur Lanznaster](https://github.com/arthurlanz)
