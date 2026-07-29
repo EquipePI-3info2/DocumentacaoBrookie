@@ -8,9 +8,7 @@ O projeto Brookiê consiste no desenvolvimento de uma plataforma de comércio el
 Professor: [Marco André Mendes](https://github.com/marrcandre)
 
 Equipe:
-- [Arthur Lanznaster](https://github.com/arthurlanz)
 - [Clara Tesser Carvalho](https://github.com/claratesser)
-- [Gabriel Sombrio](https://github.com/gaSombrio)
 - [Maria Heloiza Vitoreti](https://github.com/mariavitoreti)
 
 Links do projeto:
