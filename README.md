@@ -9,12 +9,12 @@ Professor: [Marco André Mendes](https://github.com/marrcandre)
 
 Equipe:
 - [Clara Tesser Carvalho](https://github.com/claratesser)
-- [Maria Heloiza Vitoreti](https://github.com/mariavitoreti)
+- [Maria Heloiza Vitoreti](https://github.com/mariavitoreti2)
 
 Links do projeto:
 -   [Documentação (esse documento)](https://github.com/EquipePI-3info2/DocumentacaoBrookie)
--   Backend: [Repositório](https://github.com/EquipePI-3info2/backend) e [Publicação](https://backend-qj8o.onrender.com/)
--   Frontend: [Repositório](https://github.com/EquipePI-3info2/frontend) e [Publicação](https://frontend-dusky-theta-28.vercel.app/)
+-   Backend: [Repositório](https://github.com/EquipePI-3info2/backend) e [Publicação](https://brookie-backend.vercel.app/)
+-   Frontend: [Repositório](https://github.com/EquipePI-3info2/frontend) e [Publicação](https://frontend-ochre-alpha-68.vercel.app/)
 
 # 1. Desenvolvimento
 O sistema desenvolvido neste projeto se enquadra no modelo de Ponto de Vendas (PDV) aplicado ao comércio eletrônico.
